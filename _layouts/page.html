@@ -1,144 +1,67 @@
 <!DOCTYPE HTML>
-
 <!--
-
 	Read by Fastbyte01
-
 	Based on Read-only template released by html5up.
-
 	Free for personal and commercial use under the CCA 3.0 license
-
 -->
-
 <html>
-
 	<head>
-
 		<title>{{site.title}}</title>
-
 		<meta charset="utf-8" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-
 		<link rel="stylesheet" href="assets/css/main.css" />
-
-		<link rel="shortcut icon" href="/assets/images/favicon.ico">
-
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-
 	</head>
-
 	<body>
 
-
-
 		<!-- Header -->
-
 			<section id="header">
-
 				  <header>
-
 				{% include header.html %}
-
 				</header>
 
-
-
 				<nav id="nav">
-
 				  {% include nav.html %}
-
 				</nav>
 
-
-
 				<footer>
-
 				{% include social-links.html %}
-
 				</footer>
-
 			</section>
 
-
-
 		<!-- Wrapper -->
-
 			<div id="wrapper">
 
-
-
 				<!-- Main -->
-
 					<div id="main">
 
-
-
-						<!-- Bio -->
-
+						<!-- One -->
 							<section id="one">
-
-								{% include bio.html %}
-
+								{% include section1.html %}
 							</section>
 
-
-
-						<!-- Writing -->
-
-							<section id="writing">
-
-								{% include writing.html %}
-
+						<!-- Two -->
+							<section id="two">
+								{% include section2.html %}
 							</section>
-
 
 						<!-- Three -->
-
-							<section id="projects">
-
+							<section id="three">
 								{% include section3.html %}
-
 							</section>
-
-
-						<!-- Awards -->
-
-							<section id="awards">
-
-								{% include awards.html %}
-
-							</section>
-
-
-
 
 					</div>
 
-
-
 				<!-- Footer -->
-
 					<section id="footer">
-
 					{% include footer.html %}	
-
 					</section>
-
-
 
 			</div>
 
-
-
 		<!-- Scripts -->
-
 			{%include script.html %}
 
-
-
 	</body>
-
 </html>
