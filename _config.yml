@@ -36,6 +36,13 @@ articles: [
   
 ]
 
+#awards 
+
+awards: [
+
+    ["http://www.giantstep.ca/won-2nd-place-at-the-stantec-idea-hackathon/","Stantec Hackathon Smart City Solution, 2019"]
+
+]
 
 
 # Projects
@@ -71,13 +78,6 @@ proj3-image: /assets/images/sgan.jpg
 proj3-desc: "Evaluating the performance of generative-adversarial-networks to correctly label unlabelled images"
 
 
-#awards 
-
-awards: [
-
-    ["http://www.giantstep.ca/won-2nd-place-at-the-stantec-idea-hackathon/","Stantec Hackathon Smart City Solution, 2019"]
-
-]
 
 
 
