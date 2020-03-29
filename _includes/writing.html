@@ -1,0 +1,23 @@
+<div class="container">
+
+    <ul class="feature-icons">
+
+        <li class="fa-pencil">
+
+            <h4>Writing</h4>
+
+            <ul>
+
+                {% for article in site.articles %}
+
+                    <li style="padding: 0.1em; margin: 0;"><a href="{{article[0]}}" target="_blank">{{article[1]}}</a>, {{article[2]}}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+</div>

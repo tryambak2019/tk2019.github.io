@@ -1,0 +1,24 @@
+
+<div class="container">
+
+    <ul class="feature-icons">
+
+        <li class="fa-book">
+
+            <h4>Research</h4>
+
+            <ul>
+
+                {% for pub in site.publications %}
+
+                    <li style="padding: 0.1em; margin: 0;">{{pub[0]}}, <a href="{{pub[2]}}" target="_blank">{{pub[1]}}</a></li>
+
+                {% endfor %}
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+</div>
