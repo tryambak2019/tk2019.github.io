@@ -18,7 +18,7 @@ year: 2020
 
 tagline: "Data scientist. Travel junkie."
 
-bio: "Tryambak is a data scientist based in Toronto, Canada. In past has worked on reinforcement learning, anamoly detection and machine translation. He currently works for Arcadis, and is actively involved in several NLP projects. Tryambak is intersted in sharing ideas and frquently participates with the community and tech for good. In spare time, he mentors data science students, and splits time between traveling and volunteering."
+bio: "Tryambak is a data scientist based in Toronto, Canada. In past he has worked on reinforcement learning, anamoly detection and machine translation. He currently works for Arcadis, and is actively involved in several NLP projects. Tryambak is intersted in sharing ideas and frquently participates with the community and tech for good. In spare time, he mentors data science students, and splits time between traveling and volunteering."
 
 
 
@@ -28,20 +28,12 @@ bio: "Tryambak is a data scientist based in Toronto, Canada. In past has worked 
 
 articles: [
   
-  ["https://www.kdnuggets.com/2020/01/semi-supervised-learning-generative-adversarial-networks.html","Semi-supervised learning with Geneative Adversarial Networks","KDNuggets, January 2020"],
+  ["https://www.kdnuggets.com/2020/01/semi-supervised-learning-generative-adversarial-networks.html","Semi-supervised learning with Generative Adversarial Networks","KDNuggets, January 2020"],
   
-  ["https://aisc.ai.science/super-blog/recsys-2019/","BERT4Rec: Bidirectional sequential recommendations, December 2019"],
+  ["https://aisc.ai.science/super-blog/recsys-2019/","BERT4Rec: Bidirectional sequential recommendations", "December 2019"],
   
-  ["https://aisc.ai.science/super-blog/rl-2019/","Financial series prediction using Attention LSTM, Ocotber 2019"]
+  ["https://aisc.ai.science/super-blog/rl-2019/","Financial series prediction using Attention LSTM", "Ocotber 2019"]
   
-]
-
-#awards 
-
-awards: [
-
-    ["http://www.giantstep.ca/won-2nd-place-at-the-stantec-idea-hackathon/","Stantec Hackathon Smart City Solution, 2019"]
-
 ]
 
 
@@ -53,7 +45,8 @@ proj1: "AWS Sagemaker Deploy"
 
 proj1-link: https://github.com/tryambak2019/MNIST-Deploy-AWSSagemaker
 
-proj1-image: /assets/images/awssagemaker_mldeploy.jpg
+#proj1-image: /assets/images/awssagemaker_mldeploy.jpg
+proj1-image: /assets/images/avatar.jpg
 
 proj1-desc: "Use of AWS Sagemaker to deploy a simple MNIST machine learning model"
 
@@ -63,7 +56,8 @@ proj2: "Reinforcement Learning on Stock Trading"
 
 proj2-link: https://github.com/tryambak2019/ReinforcementLearning_StockTrading
 
-proj2-image: /assets/images/rl_stocks.jpg
+#proj2-image: /assets/images/rl_stocks.jpg
+proj1-image: /assets/images/banner.jpg
 
 proj2-desc: "Comparing the performance of deep learning architectures (RNN, Transformers, Attention LSTM, Weighted Attention) as reinforcement learning policies to predict stock market behavior"
 
@@ -73,10 +67,19 @@ proj3: "Semi-supervised learning using Generative Adverserial Networks"
 
 proj3-link: https://github.com/tryambak2019/SGAN
 
-proj3-image: /assets/images/sgan.jpg
+#proj3-image: /assets/images/sgan.jpg
+proj1-image: /assets/images/babynames.jpg
 
 proj3-desc: "Evaluating the performance of generative-adversarial-networks to correctly label unlabelled images"
 
+
+#awards 
+
+awards: [
+
+    ["http://www.giantstep.ca/won-2nd-place-at-the-stantec-idea-hackathon/","Stantec Smart City Hackathon, 2019"]
+
+]
 
 
 
