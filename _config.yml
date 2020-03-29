@@ -22,8 +22,6 @@ bio: "Tryambak is a data scientist based in Toronto, Canada. In past has worked 
 
 
 
-
-
 # Writing
 
 
@@ -32,7 +30,7 @@ articles: [
   
   ["https://www.kdnuggets.com/2020/01/semi-supervised-learning-generative-adversarial-networks.html","Semi-supervised learning with Geneative Adversarial Networks","KDNuggets, January 2020"],
   
-  ["https://aisc.ai.science/super-blog/recsys-2019/","BERT4Rec: Bidirectional sequential recommendations, December 2019"]
+  ["https://aisc.ai.science/super-blog/recsys-2019/","BERT4Rec: Bidirectional sequential recommendations, December 2019"],
   
   ["https://aisc.ai.science/super-blog/rl-2019/","Financial series prediction using Attention LSTM, Ocotber 2019"]
   
@@ -77,7 +75,7 @@ proj3-desc: "Evaluating the performance of generative-adversarial-networks to co
 
 awards: [
 
-http://www.giantstep.ca/won-2nd-place-at-the-stantec-idea-hackathon/
+    ["http://www.giantstep.ca/won-2nd-place-at-the-stantec-idea-hackathon/","Stantec Hackathon Smart City Solution, 2019"]
 
 ]
 
