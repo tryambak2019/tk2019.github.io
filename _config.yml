@@ -1,62 +1,124 @@
-#Site configuration
-title: Read
-name:  Read Jekyll
+
+
+# Site configuration
+
+title: Tryambak KaushikTryambak Kaushik
+
+name:  Tryambak Kaushik
+
 author: Tryambak Kaushik
-work:  Developer
+
+work: Currently based in Toronto
+
 year: 2020
 
-# Navigation
-nav1: "About"
-nav2: "Things I Can Do as good"
-nav3: "A Few Accomplishments"
 
-# Section1
-sec1: "Read Jekyll"
-sec2: "Just an incredibly simple responsive template for Jekyll."
-sec3: "Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum."
 
-# Section 2
-sec4: "Things I Can Do"
-sec5: "Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet."
-icon1: "fas fa-code"
-icont1: "Write all the code"
-icon2: "fa-cubes"
-icont2: "Stack small boxes"
-icon3: "fa-book"
-icont3: "Read books and stuff"
-icon4: "fa-coffee"
-icont4: "Drink much coffee"
-icon5: "fa-bolt"
-icont5: "Lightning bolt"
-icon6: "fa-users"
-icont6: "Shadow clone technique"
 
-# Section 3
-sec6: "A Few Accomplishments"
-sec7: "Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus."
-sec8: "Possibly broke spacetime"
-sec9: "Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet."
-sec10: "Terraformed a small moon"
-sec11: "Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet."
-sec12: "Snapped dark matter in the wild"
-sec13: "Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet."
+
+tagline: "Data scientist. Travel junkie."
+
+bio: "Tryambak is a data scientist based in Toronto, Canada. In past has worked on reinforcement learning, anamoly detection and machine translation. He currently works for Arcadis, and is actively involved in several NLP projects. Tryambak is intersted in sharing ideas and frquently participates with the community and tech for good. In spare time, he mentors data science students, and splits time between traveling and volunteering."
+
+
+
+# Writing
+
+
+
+articles: [
+  
+  ["https://www.kdnuggets.com/2020/01/semi-supervised-learning-generative-adversarial-networks.html","Semi-supervised learning with Geneative Adversarial Networks","KDNuggets, January 2020"],
+  
+  ["https://aisc.ai.science/super-blog/recsys-2019/","BERT4Rec: Bidirectional sequential recommendations, December 2019"],
+  
+  ["https://aisc.ai.science/super-blog/rl-2019/","Financial series prediction using Attention LSTM, Ocotber 2019"]
+  
+]
+
+
+
+# Projects
+
+
+
+proj1: "AWS Sagemaker Deploy"
+
+proj1-link: https://github.com/tryambak2019/MNIST-Deploy-AWSSagemaker
+
+proj1-image: /assets/images/awssagemaker_mldeploy.jpg
+
+proj1-desc: "Use of AWS Sagemaker to deploy a simple MNIST machine learning model"
+
+
+
+proj2: "Reinforcement Learning on Stock Trading"
+
+proj2-link: https://github.com/tryambak2019/ReinforcementLearning_StockTrading
+
+proj2-image: /assets/images/rl_stocks.jpg
+
+proj2-desc: "Comparing the performance of deep learning architectures (RNN, Transformers, Attention LSTM, Weighted Attention) as reinforcement learning policies to predict stock market behavior"
+
+
+
+proj3: "Semi-supervised learning using Generative Adverserial Networks"
+
+proj3-link: https://github.com/tryambak2019/SGAN
+
+proj3-image: /assets/images/sgan.jpg
+
+proj3-desc: "Evaluating the performance of generative-adversarial-networks to correctly label unlabelled images"
+
+
+#awards 
+
+awards: [
+
+    ["http://www.giantstep.ca/won-2nd-place-at-the-stantec-idea-hackathon/","Stantec Hackathon Smart City Solution, 2019"]
+
+]
+
+
 
 # Social Links
-facebook: username
-twitter:  username
-#google: username
-#instagram: username
-#pinterest: username
-#linkedin: username
-#youtube: username
-#spotify: username
-#lastfm: username
-github: username
-#stackoverflow: username
-#quora: username
-#reddit: username
-#medium: username
-#vimeo: username
-keybase: username
-email: test@gmail.com
 
+# facebook: username
+
+# twitter:  sereprz
+
+#google: username
+
+#instagram: username
+
+#pinterest: username
+
+linkedin: tryambakkaushik
+
+#youtube: username
+
+#spotify: username
+
+#lastfm: username
+
+github: tryambak2019
+
+#stackoverflow: username
+
+#quora: username
+
+#reddit: username
+
+#medium: username
+
+#vimeo: username
+
+#keybase: username
+
+email: tryambak_k@yahoo.com
+
+
+
+
+
+theme: jekyll-theme-minimal
