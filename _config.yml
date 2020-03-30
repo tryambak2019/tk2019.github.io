@@ -45,8 +45,7 @@ proj1: "AWS Sagemaker Deploy"
 
 proj1-link: https://github.com/tryambak2019/MNIST-Deploy-AWSSagemaker
 
-#proj1-image: /assets/images/awssagemaker_mldeploy.jpg
-proj1-image: /assets/images/avatar.jpg
+proj1-image: /assets/images/awssagemaker_mldeploy.jpg
 
 proj1-desc: "Use of AWS Sagemaker to deploy a simple MNIST machine learning model"
 
@@ -57,7 +56,6 @@ proj2: "Reinforcement Learning on Stock Trading"
 proj2-link: https://github.com/tryambak2019/ReinforcementLearning_StockTrading
 
 proj2-image: /assets/images/rl_stocks.jpg
-#proj2-image: /assets/images/banner.jpg
 
 proj2-desc: "Comparing the performance of deep learning architectures (RNN, Transformers, Attention LSTM, Weighted Attention) as reinforcement learning policies to predict stock market behavior"
 
@@ -67,8 +65,7 @@ proj3: "Semi-supervised learning using Generative Adverserial Networks"
 
 proj3-link: https://github.com/tryambak2019/SGAN
 
-#proj3-image: /assets/images/sgan.jpg
-proj3-image: /assets/images/babynames.jpg
+proj3-image: /assets/images/sgan.jpg
 
 proj3-desc: "Evaluating the performance of generative-adversarial-networks to correctly label unlabelled images"
 
