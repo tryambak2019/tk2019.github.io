@@ -3136,7 +3136,7 @@
 
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-		border-bottom: solid 1px #918151;
+		border-bottom: solid 1px #FF0000;
 
 		color: inherit;
 
@@ -3150,7 +3150,7 @@
 
 			border-bottom-color: transparent;
 
-			color: #918151 !important;
+			color: #FF0000 !important;
 
 		}
 
@@ -3184,7 +3184,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 
-		color: #918151;
+		color: #FF0000;
 
 		font-weight: 700;
 
@@ -3454,7 +3454,7 @@
 
 	header.major h2 {
 
-		color: #918151;
+		color: #FF0000;
 
 		font-size: 3.5em;
 
@@ -3464,7 +3464,7 @@
 
 		header.major h2 + p {
 
-			color: #918151;
+			color: #FF0000;
 
 			font-size: 1.75em;
 
@@ -4186,7 +4186,7 @@
 
 				ul.feature-icons li:before {
 
-					background: #918151;
+					background: #FF0000;
 
 					border-radius: 100%;
 
@@ -4924,7 +4924,7 @@
 
 		justify-content: space-between;
 
-		background: #918151;
+		background: #FF0000;
 
 		color: #ffffff;
 
@@ -5102,7 +5102,7 @@
 
 				#header > nav ul li {
 
-					border-top: solid 2px #918151;
+					border-top: solid 2px #FF0000;
 
 					display: block;
 
@@ -5698,7 +5698,7 @@
 
 					#titleBar .toggle:before {
 
-						background: #918151;
+						background: #FF0000;
 
 						color: #ffffff;
 
