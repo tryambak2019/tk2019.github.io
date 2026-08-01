@@ -1,144 +1,130 @@
-<!DOCTYPE HTML>
-
-<!--
-
-	Read by Fastbyte01
-
-	Based on Read-only template released by html5up.
-
-	Free for personal and commercial use under the CCA 3.0 license
-
--->
-
-<html>
-
-	<head>
-
-		<title>{{site.title}}</title>
-
-		<meta charset="utf-8" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-
-		<link rel="stylesheet" href="assets/css/main.css" />
-
-		<link rel="shortcut icon" href="/assets/images/favicon.ico">
-
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-
-	</head>
-
-	<body>
-
-
-
-		<!-- Header -->
-
-			<section id="header">
-
-				  <header>
-
-				{% include header.html %}
-
-				</header>
-
-
-
-				<nav id="nav">
-
-				  {% include nav.html %}
-
-				</nav>
-
-
-
-				<footer>
-
-				{% include social-links.html %}
-
-				</footer>
-
-			</section>
-
-
-
-		<!-- Wrapper -->
-
-			<div id="wrapper">
-
-
-
-				<!-- Main -->
-
-					<div id="main">
-
-
-
-						<!-- Bio -->
-
-							<section id="one">
-
-								{% include bio.html %}
-
-							</section>
-
-
-
-						<!-- Writing -->
-
-							<section id="writing">
-
-								{% include writing.html %}
-
-							</section>
-
-
-						<!-- Three -->
-
-							<section id="projects">
-
-								{% include section3.html %}
-
-							</section>
-
-
-						<!-- Awards -->
-
-							<section id="awards">
-
-								{% include awards.html %}
-
-							</section>
-
-
-
-
-					</div>
-
-
-
-				<!-- Footer -->
-
-					<section id="footer">
-
-					{% include footer.html %}	
-
-					</section>
-
-
-
-			</div>
-
-
-
-		<!-- Scripts -->
-
-			{%include script.html %}
-
-
-
-	</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="theme-color" content="#07111f">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}">
+    <title>{{ site.title }}</title>
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Tryambak Kaushik, home">TK<span>.</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#writing">Writing</a>
+        <a class="nav-cta" href="https://www.linkedin.com/in/{{ site.linkedin }}/" target="_blank" rel="noreferrer">Connect ↗</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow"><span></span> Toronto · Building across cloud, AI, and robotics</p>
+        <h1 id="hero-title">I build the systems that make <em>AI safe to act.</em></h1>
+        <p class="hero-copy">I’m Tryambak Kaushik, a senior software engineer focused on reliable AI infrastructure: governed agents, production platforms, and release validation for physical systems.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">See selected work</a>
+          <a class="button secondary" href="https://github.com/{{ site.github }}" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <div class="signal-grid" aria-label="Areas of focus">
+          <div><strong>15+ years</strong><span>software and data systems</span></div>
+          <div><strong>Cloud → edge</strong><span>production AI infrastructure</span></div>
+          <div><strong>Fail closed</strong><span>explicit gates before action</span></div>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <div class="section-heading">
+          <p class="kicker">Selected work</p>
+          <h2>Small proofs of consequential ideas.</h2>
+          <p>Current explorations at the boundary between software correctness and real-world outcomes.</p>
+        </div>
+
+        <article class="project featured">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-meta"><span>Physical AI</span><span>Release validation</span><span>2026</span></div>
+            <h3>Robot Release Gate</h3>
+            <p class="project-lede">Test how the machine behaves—not just whether the code runs.</p>
+            <p>A deterministic prototype where an AI-runtime update passes component checks but adds 180 ms of decision latency. The robot misses its pickup, so the deployment is blocked on physical outcome.</p>
+            <div class="project-proof">
+              <div><span class="pass">PASS</span><small>model equivalence</small></div>
+              <div><span class="pass">PASS</span><small>throughput</small></div>
+              <div><span class="fail">BLOCK</span><small>task completion</small></div>
+            </div>
+            <p class="scope-note"><strong>Honest boundary:</strong> this is a browser-based timing experiment, not a physics simulation or hardware validation. The next test is reproducing the failure in MuJoCo.</p>
+            <div class="project-links">
+              <a href="https://tryambak2019.github.io/physical-ai-release-gate/" target="_blank" rel="noreferrer">View live experiment ↗</a>
+              <a href="https://github.com/tryambak2019/physical-ai-release-gate" target="_blank" rel="noreferrer">Inspect source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-meta"><span>Agent infrastructure</span><span>BigQuery</span><span>Google Cloud</span></div>
+            <h3>SQL Execution Gate</h3>
+            <p class="project-lede">An agent that must show its work before it can touch data.</p>
+            <p>A deployed, safety-gated BigQuery assistant that separates SQL planning from execution. It loads the live schema, exposes generated SQL for an explicit human decision, mechanically blocks standard SQL writes, and fails closed when execution errors.</p>
+            <ul class="compact-list">
+              <li>Planner and tool-bearing executor are separate agents</li>
+              <li>Human approve/reject gate stays in the same session</li>
+              <li>React, FastAPI, Google ADK, Terraform, Cloud Build, and Cloud Run</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/tryambak2019/sql-execution-gate" target="_blank" rel="noreferrer">Inspect architecture and source ↗</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" class="section split-section">
+        <div class="section-heading">
+          <p class="kicker">What I bring</p>
+          <h2>Production depth, applied to AI’s harder failure modes.</h2>
+        </div>
+        <div class="capability-grid">
+          <article><span>01</span><h3>AI platforms</h3><p>Agent workflows, model-serving paths, MLOps, evaluation gates, and human-in-the-loop controls.</p></article>
+          <article><span>02</span><h3>Distributed systems</h3><p>Kubernetes, event and data platforms, observability, CI/CD, and infrastructure as code across AWS, Azure, and GCP.</p></article>
+          <article><span>03</span><h3>Physical AI validation</h3><p>Exploring how latency, stale state, and system integration failures become measurable release criteria for robots.</p></article>
+          <article><span>04</span><h3>Technical leadership</h3><p>Turning ambiguous enterprise problems into systems teams can ship, operate, and improve.</p></article>
+        </div>
+      </section>
+
+      <section id="writing" class="section writing-section">
+        <div class="section-heading">
+          <p class="kicker">Earlier writing</p>
+          <h2>Foundations that still inform the work.</h2>
+        </div>
+        <div class="writing-list">
+          <a href="https://www.kdnuggets.com/2020/01/semi-supervised-learning-generative-adversarial-networks.html" target="_blank" rel="noreferrer"><span>Generative models</span><strong>Semi-supervised learning with GANs</strong><small>KDnuggets · 2020 ↗</small></a>
+          <a href="https://aisc.ai.science/super-blog/recsys-2019/" target="_blank" rel="noreferrer"><span>Recommendations</span><strong>BERT4Rec: bidirectional sequential recommendations</strong><small>AISC · 2019 ↗</small></a>
+          <a href="https://aisc.ai.science/super-blog/rl-2019/" target="_blank" rel="noreferrer"><span>Sequence models</span><strong>Financial series prediction using Attention LSTM</strong><small>AISC · 2019 ↗</small></a>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <p class="kicker">Let’s compare notes</p>
+        <h2>Working on reliable AI infrastructure or robotics validation?</h2>
+        <p>I’m interested in the system-level problems that appear after the model works: deployment safety, runtime reliability, evaluation, and the gap between software metrics and real outcomes.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://www.linkedin.com/in/{{ site.linkedin }}/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+          <a class="button secondary" href="mailto:{{ site.email }}">Email me</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Tryambak Kaushik</span>
+      <span>Built to show the work, including its limits.</span>
+    </footer>
+  </body>
 </html>
