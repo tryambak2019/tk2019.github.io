@@ -81,11 +81,17 @@ h1 em { color: var(--accent); font-style: normal; }
 h2 { font-size: clamp(2.1rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.045em; }
 .section-heading > p:last-child { color: var(--muted); font-size: 1.05rem; }
 
-.leadership-section { padding-top: 6rem; }
-.leadership-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.leadership-grid article { min-height: 245px; padding: 1.6rem; background: var(--panel); }
+.value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.value-grid article { min-height: 190px; padding: 1.5rem; background: var(--panel); }
+.value-grid strong { display: block; margin-bottom: .65rem; font-size: 1.05rem; }
+.value-grid p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
+.leadership-section { padding-top: 4.5rem; padding-bottom: 5rem; }
+.leadership-section .section-heading { margin-bottom: 2rem; }
+.leadership-section h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); }
+.leadership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.leadership-grid article { min-height: 190px; padding: 1.35rem; background: var(--panel); }
 .leadership-grid span { color: var(--accent); font-family: "DM Mono", monospace; font-size: .72rem; }
-.leadership-grid h3 { margin: 3rem 0 .55rem; font-size: 1.2rem; }
+.leadership-grid h3 { margin: 1.6rem 0 .45rem; font-size: 1.08rem; }
 .leadership-grid p { max-width: 440px; color: var(--muted); font-size: .9rem; line-height: 1.65; }
 .evidence-strip { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 1px; border: 1px solid var(--line); }
 .evidence-strip div { padding: 1.35rem; }
@@ -145,7 +151,7 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding-top: 
   .project-proof div + div { border-left: 0; border-top: 1px solid var(--line); }
   .split-section { grid-template-columns: 1fr; gap: 1rem; }
   .capability-grid { grid-template-columns: 1fr; }
-  .leadership-grid, .evidence-strip { grid-template-columns: 1fr; }
+  .value-grid, .leadership-grid, .evidence-strip { grid-template-columns: 1fr; }
   .evidence-strip div + div { border-left: 0; border-top: 1px solid var(--line); }
   .writing-list a { grid-template-columns: 1fr; gap: .3rem; }
   .writing-list small { text-align: left; }
