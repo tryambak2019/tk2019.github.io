@@ -81,6 +81,19 @@ h1 em { color: var(--accent); font-style: normal; }
 h2 { font-size: clamp(2.1rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.045em; }
 .section-heading > p:last-child { color: var(--muted); font-size: 1.05rem; }
 
+.leadership-section { padding-top: 6rem; }
+.leadership-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.leadership-grid article { min-height: 245px; padding: 1.6rem; background: var(--panel); }
+.leadership-grid span { color: var(--accent); font-family: "DM Mono", monospace; font-size: .72rem; }
+.leadership-grid h3 { margin: 3rem 0 .55rem; font-size: 1.2rem; }
+.leadership-grid p { max-width: 440px; color: var(--muted); font-size: .9rem; line-height: 1.65; }
+.evidence-strip { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 1px; border: 1px solid var(--line); }
+.evidence-strip div { padding: 1.35rem; }
+.evidence-strip div + div { border-left: 1px solid var(--line); }
+.evidence-strip strong, .evidence-strip span { display: block; }
+.evidence-strip strong { color: var(--accent-2); font-family: "DM Mono", monospace; font-size: 1.2rem; }
+.evidence-strip span { margin-top: .35rem; color: var(--dim); font-size: .76rem; line-height: 1.5; }
+
 .project { display: grid; grid-template-columns: 80px 1fr; border-top: 1px solid var(--line); padding: 3rem 0 4.5rem; }
 .project-number { color: var(--dim); }
 .project-body { max-width: 900px; }
@@ -132,6 +145,8 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding-top: 
   .project-proof div + div { border-left: 0; border-top: 1px solid var(--line); }
   .split-section { grid-template-columns: 1fr; gap: 1rem; }
   .capability-grid { grid-template-columns: 1fr; }
+  .leadership-grid, .evidence-strip { grid-template-columns: 1fr; }
+  .evidence-strip div + div { border-left: 0; border-top: 1px solid var(--line); }
   .writing-list a { grid-template-columns: 1fr; gap: .3rem; }
   .writing-list small { text-align: left; }
   footer { flex-direction: column; }
