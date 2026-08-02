@@ -5,12 +5,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="home-hero" aria-labelledby="hero-title">
     <div class="hero-intro">
       <p class="eyebrow">Enterprise AI · Data platforms · Production systems</p>
-      <h1 id="hero-title">I turn ambitious AI ideas into systems people can <em>actually use.</em></h1>
-      <p class="hero-copy">I’m Tryambak Kaushik, an engineering leader with 15+ years across software, AI, cloud, and data platforms. I work from architecture through production—especially where reliability, governance, and practical delivery matter.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="#work">Explore selected work</a>
-        <a class="text-link" href="/assets/docs/cv.pdf" target="_blank" rel="noreferrer">Read résumé ↗</a>
-      </div>
+      <h1 id="hero-title">I build enterprise AI systems that work <em>in production.</em></h1>
+      <p class="hero-copy">I’m Tryambak Kaushik, an engineering leader with 15+ years across software, AI, cloud, and data platforms. I connect business needs to architecture, implementation, and reliable operation.</p>
     </div>
     <aside class="impact-panel" aria-label="Selected experience">
       <p class="panel-label">Selected experience</p>
@@ -21,8 +17,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <section id="value" class="section split-heading">
-    <div><p class="kicker">What I bring</p><h2>Judgment across the full production path.</h2></div>
-    <p>My advantage is range with accountability: translating business needs into architecture, building the hard parts, and staying close enough to operations to know whether the system works.</p>
+    <div><p class="kicker">What I bring</p><h2>From business need to reliable operation.</h2></div>
+    <p>I work across requirements, architecture, implementation, and operations—and remain accountable for what happens after launch.</p>
   </section>
   <section class="capability-grid" aria-label="Core capabilities">
     <article><span>01</span><h3>Enterprise AI delivery</h3><p>Generative AI, governed data access, full-stack applications, deployment, and production operations.</p></article>
@@ -31,7 +27,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <section id="work" class="section work-section">
-    <div class="split-heading"><div><p class="kicker">Selected work</p><h2>Working systems, with the limits left visible.</h2></div><p>Two current prototypes explore a shared question: how do we put powerful AI behind controls that remain understandable when the system reaches production?</p></div>
+    <div class="split-heading"><div><p class="kicker">Selected work</p><h2>Two practical tests of safer AI deployment.</h2></div><p>Both prototypes ask a simple question: can AI do useful work while people can still review important decisions, understand the safeguards, and see clearly when something fails?</p></div>
 
     <article class="work-feature">
       <div class="work-index">01</div>
@@ -54,13 +50,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="work-lede">An AI agent that must show its work before it can touch data.</p>
         <p>The deployed assistant separates SQL planning from execution, exposes generated SQL for a human decision, blocks standard SQL writes mechanically, and fails closed on execution errors.</p>
         <div class="architecture-line" aria-label="System flow"><span>Question</span><i>→</i><span>Planner</span><i>→</i><span>Human approval</span><i>→</i><span>Read-only executor</span></div>
-        <div class="link-list"><a href="https://fsbq-agent-bqjiefengq-uc.a.run.app/app/" target="_blank" rel="noreferrer">Open live demo ↗</a><a href="https://github.com/tryambak2019/sql-execution-gate" target="_blank" rel="noreferrer">Inspect architecture ↗</a></div>
+        <div class="link-list"><a href="https://sql-execution-gate-bqjiefengq-uc.a.run.app/app/" target="_blank" rel="noreferrer">Open live demo ↗</a><a href="https://github.com/tryambak2019/sql-execution-gate" target="_blank" rel="noreferrer">Inspect architecture ↗</a></div>
       </div>
     </article>
   </section>
 
   <section id="writing" class="section writing-section">
-    <div class="split-heading"><div><p class="kicker">Writing & technical studies</p><h2>Ideas explained through mechanisms and evidence.</h2></div><p>The original AISC publication URLs were retired. The two reports now live here as edited web presentations under a domain I control.</p></div>
+    <div class="split-heading"><div><p class="kicker">Writing & technical studies</p><h2>Ideas explained through mechanisms and evidence.</h2></div><p>These studies were originally published with the Toronto chapter of the Artificial Intelligence Society of Canada (AISC). AISC later removed the original pages, so I now host edited versions here and link to the source reports.</p></div>
     <div class="editorial-grid">
       <a href="/aisc/recsys/"><span>Sequential recommendations</span><h3>How BERT4Rec learns from both sides of a sequence</h3><p>Architecture, masked-item training, evaluation, and what the reported gains do—and do not—prove.</p><small>Read case study →</small></a>
       <a href="/aisc/rl/"><span>Reinforcement learning</span><h3>RNN versus Transformer policies for a trading experiment</h3><p>An educational comparison with exact reported results and a frank methodology audit.</p><small>Read case study →</small></a>

@@ -43,16 +43,16 @@ const test = [{label:'RNN', value:7557, max:10347},{label:'Transformer', value:1
         </section>
 
         <section id="audit">
-          <p class="section-number">04 · Method audit</p>
-          <h2>The honest conclusion is narrower than “Transformers trade better.”</h2>
-          <div class="verdict-grid"><div class="supports"><strong>What the run suggests</strong><ul><li>The Transformer policy found a stronger solution in this specific configuration.</li><li>Attention offered a credible alternative to recurrent sequence processing.</li><li>A held-out time period was used instead of reporting training behavior alone.</li></ul></div><div class="limits"><strong>Why it is not investment evidence</strong><ul><li>One index and one historical window.</li><li>Only 10 training episodes and no repeated random seeds.</li><li>No transaction costs, slippage, risk-adjusted return, or drawdown analysis reported.</li><li>Evaluation stopped at a profit threshold, which can bias comparisons.</li></ul></div></div>
-          <blockquote><strong>Defensible takeaway:</strong> in this proof of concept, the Transformer policy outperformed the RNN policy under the report’s chosen environment and stopping rule. Generalization remains untested.</blockquote>
+          <p class="section-number">04 · Reading the results</p>
+          <h2>The Transformer won this experiment, not the broader argument.</h2>
+          <p>In the chosen setup, the Transformer policy earned the higher reported profit and reached the target portfolio ratio in fewer episodes. Using a held-out time period was also better than reporting training performance alone. The experiment therefore shows that attention was a credible alternative to recurrent processing for this task.</p>
+          <p>It does not show that Transformers are better trading systems. The comparison used one index, one historical window, 10 training episodes, and no repeated random seeds. It did not account for transaction costs, slippage, drawdown, or risk-adjusted return, and stopping evaluation at a profit threshold may have favored the apparent winner. A defensible conclusion is narrower: the Transformer outperformed the RNN under this environment and stopping rule; whether that result generalizes remains unknown.</p>
         </section>
 
         <section id="credit" class="credit-box">
           <p class="section-number">Archive & provenance</p>
-          <h2>The original AISC page disappeared; the report and implementation path remain inspectable.</h2>
-          <p>This page is an edited presentation of the attached historical report. The repository contains the written paper, notebook, and curation notes. The material is educational and should not be read as financial advice or as a validated trading strategy.</p>
+          <h2>AISC Toronto originally published this study; the source material remains inspectable here.</h2>
+          <p>This educational study was originally published with the Toronto chapter of the Artificial Intelligence Society of Canada (AISC). AISC later removed the original page, so this edited presentation is hosted here. The repository contains the written paper and notebook; neither should be read as financial advice or as a validated trading strategy.</p>
           <div class="link-list"><a href="https://github.com/tryambak2019/AISC/tree/main/RL" target="_blank" rel="noreferrer">Inspect project archive ↗</a><a href="https://github.com/tryambak2019/AISC/blob/main/RL/Reinforcement_Learning_RNN_Transformer_AttentionLSTM.ipynb" target="_blank" rel="noreferrer">Open notebook ↗</a><a href="https://github.com/tryambak2019/AISC/blob/main/RL/Paper.docx" target="_blank" rel="noreferrer">Open original report ↗</a></div>
         </section>
       </div>
