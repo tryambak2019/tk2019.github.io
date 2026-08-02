@@ -51,7 +51,7 @@ nav a:hover { color: var(--ink); }
 .nav-cta { border: 1px solid var(--line); border-radius: 999px; padding: .48rem .85rem; }
 
 main, footer { max-width: var(--max); margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
-.hero { min-height: 82vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 0 4rem; }
+.hero { min-height: 64vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 0 4rem; }
 .eyebrow, .kicker, .project-meta, .project-number, .writing-list span {
   font-family: "DM Mono", monospace;
   text-transform: uppercase;
