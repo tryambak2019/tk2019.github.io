@@ -1,0 +1,25 @@
+---
+const { currentPath = '/' } = Astro.props;
+const isHome = currentPath === '/';
+---
+<header class="site-header">
+  <a class="wordmark" href="/" aria-label="Tryambak Kaushik, home">TK<span>.</span></a>
+  <nav aria-label="Primary navigation">
+    {isHome ? (
+      <>
+        <a href="#value">What I bring</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#work">Work</a>
+        <a href="#writing">Writing</a>
+      </>
+    ) : (
+      <>
+        <a href="/">Home</a>
+        <a href="/aisc/">AISC</a>
+        <a href="/aisc/recsys/">RecSys</a>
+        <a href="/aisc/rl/">RL</a>
+      </>
+    )}
+    <a class="nav-cta" href="https://www.linkedin.com/in/tryambakkaushik/" target="_blank" rel="noreferrer">Connect ↗</a>
+  </nav>
+</header>

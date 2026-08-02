@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="BERT4Rec Case Study — Tryambak Kaushik" currentPath="/aisc/recsys/" description="Case study for the curated BERT4Rec recommender systems project from the AISC portfolio.">
+  <section class="page-hero">
+    <p class="breadcrumbs"><a href="/">Home</a> / <a href="/aisc/">AISC</a> / RecSys</p>
+    <p class="eyebrow">AISC · Recommender systems</p>
+    <h1>BERT4Rec for sequential recommendations, presented with <em>evidence and limits.</em></h1>
+    <p>This project explored recommendation modeling with sequence-aware transformer methods. For portfolio use, the folder was reduced to the artifacts that still help a reviewer verify the work, while duplicate notebooks, generated files, and unnecessary copies were removed.</p>
+    <div class="action-row">
+      <a class="button primary" href="https://github.com/tryambak2019/AISC/tree/main/RecSys" target="_blank" rel="noreferrer">Open RecSys folder ↗</a>
+      <a class="button secondary" href="https://github.com/tryambak2019/AISC/blob/main/RecSys/README.md" target="_blank" rel="noreferrer">Read curation notes ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="kicker">What a reviewer should look at</p>
+      <h2>The project is represented through the report, the main notebook line, and the dataset reference.</h2>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-card"><strong>Primary report</strong><span>The retained capstone document captures the framing, method discussion, and broader recommendation context.</span></div>
+      <div class="detail-card"><strong>Notebook evidence</strong><span>The kept BERT4Rec notebooks show the implementation path more directly than a polished report alone would.</span></div>
+      <div class="detail-card"><strong>Reproducibility</strong><span>The MovieLens dataset reference and provenance notes explain what is public and what was intentionally not republished.</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="project-summary">
+      <strong>Project summary</strong>
+      <p class="lede">This work focused on sequential recommendation rather than static collaborative filtering. The choice of BERT4Rec matters because bidirectional sequence modeling can better represent user interaction context than simpler next-item baselines.</p>
+      <p>The public portfolio version keeps the work honest: not every intermediary artifact is preserved, and not every result is rebuilt on the site. Instead, the page points directly to the repo evidence, the kept report, and the curation notes so a reviewer can assess the project without guessing what is missing.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="note-card">
+      <strong>Portfolio judgment</strong>
+      <ul>
+        <li>The retained .docx is useful supporting evidence inside the repository.</li>
+        <li>For public presentation, this page is the better entry point because it explains what the reviewer is seeing and why the folder looks the way it does.</li>
+        <li>The repo remains the source of truth; this page provides the reading path.</li>
+      </ul>
+      <div class="link-list">
+        <a href="https://github.com/tryambak2019/AISC/blob/main/RecSys/RecSys-Capstone.docx" target="_blank" rel="noreferrer">Open supporting report ↗</a>
+        <a href="https://github.com/tryambak2019/AISC/blob/main/PORTFOLIO_DATA_PROVENANCE.md" target="_blank" rel="noreferrer">Open provenance notes ↗</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

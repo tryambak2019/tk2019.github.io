@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="RL Case Study — Tryambak Kaushik" currentPath="/aisc/rl/" description="Case study for the curated reinforcement learning and stock forecasting project from the AISC portfolio.">
+  <section class="page-hero">
+    <p class="breadcrumbs"><a href="/">Home</a> / <a href="/aisc/">AISC</a> / RL</p>
+    <p class="eyebrow">AISC · Reinforcement learning</p>
+    <h1>Financial prediction work where the <em>paper and notebook play different roles.</em></h1>
+    <p>The RL folder was reduced to the files that still tell a coherent story: the written report, the executable notebook, and a README that explains how they relate. That distinction matters because the paper is easier to read, but the notebook is where the technical implementation actually lives.</p>
+    <div class="action-row">
+      <a class="button primary" href="https://github.com/tryambak2019/AISC/tree/main/RL" target="_blank" rel="noreferrer">Open RL folder ↗</a>
+      <a class="button secondary" href="https://github.com/tryambak2019/AISC/blob/main/RL/README.md" target="_blank" rel="noreferrer">Read RL README ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="detail-grid">
+      <div class="detail-card"><strong>Notebook</strong><span>The executable path: data access, preprocessing, environment setup, and model experimentation.</span></div>
+      <div class="detail-card"><strong>Paper</strong><span>The narrative path: motivation, method framing, comparative discussion, and readable presentation of the work.</span></div>
+      <div class="detail-card"><strong>Curation note</strong><span>Generated pickles and local data derivatives are excluded from the public repo and documented separately.</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="project-summary">
+      <strong>Why this page exists</strong>
+      <p class="lede">The original publication page is gone, so this site now provides the professional framing that the repository alone should not be asked to carry.</p>
+      <p>The core project compares sequence-oriented modeling approaches for stock-series prediction, including RNN and Transformer-based thinking. The report gives reviewers a readable overview, while the notebook is the stronger signal for implementation authenticity.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="note-card">
+      <strong>Reviewer guidance</strong>
+      <ul>
+        <li>Start with the README for the relationship between the report and notebook.</li>
+        <li>Use the notebook to evaluate implementation seriousness.</li>
+        <li>Use the provenance notes to understand what data artifacts are intentionally absent from the public version.</li>
+      </ul>
+      <div class="link-list">
+        <a href="https://github.com/tryambak2019/AISC/blob/main/RL/Paper.docx" target="_blank" rel="noreferrer">Open written report ↗</a>
+        <a href="https://github.com/tryambak2019/AISC/blob/main/RL/Reinforcement_Learning_RNN_Transformer_AttentionLSTM.ipynb" target="_blank" rel="noreferrer">Open notebook ↗</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

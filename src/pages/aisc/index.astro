@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="AISC Portfolio — Tryambak Kaushik" currentPath="/aisc/" description="Curated AISC portfolio work with reproducibility notes, exclusions, and project pages for recommender systems and reinforcement learning.">
+  <section class="page-hero">
+    <p class="breadcrumbs"><a href="/">Home</a> / AISC</p>
+    <p class="eyebrow">AISC portfolio</p>
+    <h1>Coursework and capstones, rebuilt as a <em>truthful public portfolio.</em></h1>
+    <p>The original third-party publication pages are no longer available. This section restores the important work under my own domain and pairs it with the curated source repository, explicit exclusions, and reproducibility notes.</p>
+    <div class="action-row">
+      <a class="button primary" href="https://github.com/tryambak2019/AISC" target="_blank" rel="noreferrer">Open curated repository ↗</a>
+      <a class="button secondary" href="https://github.com/tryambak2019/AISC/blob/main/PORTFOLIO_DATA_PROVENANCE.md" target="_blank" rel="noreferrer">Read provenance notes ↗</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="kicker">Why this exists</p>
+      <h2>Evidence, not performance.</h2>
+      <p>The goal is not to make coursework look larger than it was. The goal is to present real work professionally: what was kept, what was excluded, how a reviewer can validate it, and where the limitations are.</p>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-card"><strong>Kept</strong><span>Core notebooks, reports, and supporting artifacts that still help a reviewer understand the technical work.</span></div>
+      <div class="detail-card"><strong>Excluded</strong><span>Large generated outputs, private credentials, trained weights, and third-party data copies that do not belong in a public repo.</span></div>
+      <div class="detail-card"><strong>Documented</strong><span>Each exclusion is described so the repo does not imply completeness where it cannot honestly provide it.</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="kicker">Featured case studies</p>
+      <h2>Two rebuilt project pages are live now.</h2>
+    </div>
+    <div class="project-grid">
+      <article class="project-card">
+        <span class="tag">Recommender systems</span>
+        <h3>BERT4Rec capstone</h3>
+        <p>A sequential recommendation project using transformer-based modeling, paired with both the supporting report and the curated notebook set.</p>
+        <div class="link-list">
+          <a href="/aisc/recsys/">Read case study ↗</a>
+          <a href="https://github.com/tryambak2019/AISC/tree/main/RecSys" target="_blank" rel="noreferrer">Open repo folder ↗</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <span class="tag">Reinforcement learning</span>
+        <h3>Financial forecasting notebook + paper</h3>
+        <p>A stock-prediction project where the notebook contains the executable path and the report gives the narrative, framing, and results discussion.</p>
+        <div class="link-list">
+          <a href="/aisc/rl/">Read case study ↗</a>
+          <a href="https://github.com/tryambak2019/AISC/tree/main/RL" target="_blank" rel="noreferrer">Open repo folder ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="note-card">
+      <strong>What comes next</strong>
+      <ul>
+        <li>Additional AISC sections can be added for GANs, semi-supervised learning, MLOps, anomaly detection, and NLP.</li>
+        <li>The repo remains the evidence layer; this site is the presentation layer.</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
