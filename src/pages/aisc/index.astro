@@ -1,65 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="AISC Portfolio — Tryambak Kaushik" currentPath="/aisc/" description="Curated AISC portfolio work with reproducibility notes, exclusions, and project pages for recommender systems and reinforcement learning.">
-  <section class="page-hero">
-    <p class="breadcrumbs"><a href="/">Home</a> / AISC</p>
-    <p class="eyebrow">AISC portfolio</p>
-    <h1>Coursework and capstones, rebuilt as a <em>truthful public portfolio.</em></h1>
-    <p>The original third-party publication pages are no longer available. This section restores the important work under my own domain and pairs it with the curated source repository, explicit exclusions, and reproducibility notes.</p>
-    <div class="action-row">
-      <a class="button primary" href="https://github.com/tryambak2019/AISC" target="_blank" rel="noreferrer">Open curated repository ↗</a>
-      <a class="button secondary" href="https://github.com/tryambak2019/AISC/blob/main/PORTFOLIO_DATA_PROVENANCE.md" target="_blank" rel="noreferrer">Read provenance notes ↗</a>
-    </div>
+<BaseLayout title="AISC report archive — Tryambak Kaushik" currentPath="/aisc/" description="Two restored AISC technical reports presented as readable, evidence-led web case studies.">
+  <section class="archive-hero">
+    <p class="breadcrumbs"><a href="/">Home</a><span>/</span>AISC archive</p>
+    <p class="eyebrow">Independent archive · Original reports from 2019</p>
+    <h1>Technical work should not disappear when a third-party URL does.</h1>
+    <p>The original AISC pages were taken down outside my control. These are not placeholder replacements: each report has been edited into a durable web presentation with the important mechanics, evidence, contribution boundaries, and limitations preserved.</p>
   </section>
-
-  <section class="section">
-    <div class="section-heading">
-      <p class="kicker">Why this exists</p>
-      <h2>Evidence, not performance.</h2>
-      <p>The goal is not to make coursework look larger than it was. The goal is to present real work professionally: what was kept, what was excluded, how a reviewer can validate it, and where the limitations are.</p>
-    </div>
-    <div class="detail-grid">
-      <div class="detail-card"><strong>Kept</strong><span>Core notebooks, reports, and supporting artifacts that still help a reviewer understand the technical work.</span></div>
-      <div class="detail-card"><strong>Excluded</strong><span>Large generated outputs, private credentials, trained weights, and third-party data copies that do not belong in a public repo.</span></div>
-      <div class="detail-card"><strong>Documented</strong><span>Each exclusion is described so the repo does not imply completeness where it cannot honestly provide it.</span></div>
-    </div>
+  <section class="archive-grid">
+    <a href="/aisc/recsys/" class="archive-card recsys-card">
+      <div class="archive-art" aria-hidden="true"><span></span><span></span><span class="mask">?</span><span></span><span></span></div>
+      <p>Sequential recommendation</p><h2>BERT4Rec, explained</h2><span class="archive-description">Why masked-item prediction and bidirectional context changed the recommendation objective.</span><small>Architecture · Training · Reported benchmarks →</small>
+    </a>
+    <a href="/aisc/rl/" class="archive-card rl-card">
+      <div class="archive-art bars" aria-hidden="true"><span style="height:42%"></span><span style="height:58%"></span><span style="height:37%"></span><span style="height:82%"></span><span style="height:64%"></span><span style="height:94%"></span></div>
+      <p>Reinforcement learning</p><h2>RNN vs Transformer policies</h2><span class="archive-description">A small trading experiment reconstructed with exact results and a methodology audit.</span><small>Experiment · Results · Limits →</small>
+    </a>
   </section>
-
-  <section class="section">
-    <div class="section-heading">
-      <p class="kicker">Featured case studies</p>
-      <h2>Two rebuilt project pages are live now.</h2>
-    </div>
-    <div class="project-grid">
-      <article class="project-card">
-        <span class="tag">Recommender systems</span>
-        <h3>BERT4Rec capstone</h3>
-        <p>A sequential recommendation project using transformer-based modeling, paired with both the supporting report and the curated notebook set.</p>
-        <div class="link-list">
-          <a href="/aisc/recsys/">Read case study ↗</a>
-          <a href="https://github.com/tryambak2019/AISC/tree/main/RecSys" target="_blank" rel="noreferrer">Open repo folder ↗</a>
-        </div>
-      </article>
-      <article class="project-card">
-        <span class="tag">Reinforcement learning</span>
-        <h3>Financial forecasting notebook + paper</h3>
-        <p>A stock-prediction project where the notebook contains the executable path and the report gives the narrative, framing, and results discussion.</p>
-        <div class="link-list">
-          <a href="/aisc/rl/">Read case study ↗</a>
-          <a href="https://github.com/tryambak2019/AISC/tree/main/RL" target="_blank" rel="noreferrer">Open repo folder ↗</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="note-card">
-      <strong>What comes next</strong>
-      <ul>
-        <li>Additional AISC sections can be added for GANs, semi-supervised learning, MLOps, anomaly detection, and NLP.</li>
-        <li>The repo remains the evidence layer; this site is the presentation layer.</li>
-      </ul>
-    </div>
-  </section>
+  <section class="archive-note section"><p class="kicker">Provenance</p><h2>Presentation changed. Claims did not.</h2><p>The source reports and code remain linked from each page. Figures are identified as report or source-paper evidence; historical results are not described as new reproductions. The BERT4Rec report’s collaborative authorship is stated explicitly.</p><a class="text-link" href="https://github.com/tryambak2019/AISC" target="_blank" rel="noreferrer">Inspect the full AISC repository ↗</a></section>
 </BaseLayout>

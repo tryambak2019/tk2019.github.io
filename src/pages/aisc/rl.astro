@@ -1,46 +1,61 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const train = [{label:'RNN', value:797, max:1080},{label:'Transformer', value:1080, max:1080}];
+const test = [{label:'RNN', value:7557, max:10347},{label:'Transformer', value:10347, max:10347}];
 ---
-<BaseLayout title="RL Case Study — Tryambak Kaushik" currentPath="/aisc/rl/" description="Case study for the curated reinforcement learning and stock forecasting project from the AISC portfolio.">
-  <section class="page-hero">
-    <p class="breadcrumbs"><a href="/">Home</a> / <a href="/aisc/">AISC</a> / RL</p>
-    <p class="eyebrow">AISC · Reinforcement learning</p>
-    <h1>Financial prediction work where the <em>paper and notebook play different roles.</em></h1>
-    <p>The RL folder was reduced to the files that still tell a coherent story: the written report, the executable notebook, and a README that explains how they relate. That distinction matters because the paper is easier to read, but the notebook is where the technical implementation actually lives.</p>
-    <div class="action-row">
-      <a class="button primary" href="https://github.com/tryambak2019/AISC/tree/main/RL" target="_blank" rel="noreferrer">Open RL folder ↗</a>
-      <a class="button secondary" href="https://github.com/tryambak2019/AISC/blob/main/RL/README.md" target="_blank" rel="noreferrer">Read RL README ↗</a>
-    </div>
-  </section>
+<BaseLayout title="RNN vs Transformer trading policies — Tryambak Kaushik" currentPath="/aisc/rl/" description="A restored educational report comparing RNN and Transformer policies in a reinforcement-learning trading experiment, with exact results and limitations.">
+  <article class="article-shell rl-article">
+    <header class="article-hero">
+      <p class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/aisc/">AISC archive</a><span>/</span>RL policy study</p>
+      <p class="eyebrow">Reinforcement learning · Educational experiment</p>
+      <h1>RNN versus Transformer policies for a <em>small trading experiment.</em></h1>
+      <p class="dek">The archived report found stronger returns and faster task completion from its Transformer policy. This reconstruction preserves those results while making the methodological weaknesses impossible to miss.</p>
+      <div class="article-meta"><span>7 min read</span><span>S&amp;P 500 · 2014–2019</span><span>Proof of concept, not trading advice</span></div>
+    </header>
 
-  <section class="section">
-    <div class="detail-grid">
-      <div class="detail-card"><strong>Notebook</strong><span>The executable path: data access, preprocessing, environment setup, and model experimentation.</span></div>
-      <div class="detail-card"><strong>Paper</strong><span>The narrative path: motivation, method framing, comparative discussion, and readable presentation of the work.</span></div>
-      <div class="detail-card"><strong>Curation note</strong><span>Generated pickles and local data derivatives are excluded from the public repo and documented separately.</span></div>
-    </div>
-  </section>
+    <div class="article-layout">
+      <aside class="article-rail"><p>On this page</p><a href="#setup">Experiment</a><a href="#policies">Policies</a><a href="#results">Results</a><a href="#audit">Method audit</a><a href="#credit">Archive</a></aside>
+      <div class="article-body">
+        <section id="setup">
+          <p class="section-number">01 · Experiment</p>
+          <h2>Can a policy learn when to buy or sell from a price sequence?</h2>
+          <p>The project framed trading as an OpenAI Gym environment. The state described the market observation; actions changed the portfolio; reward reflected the resulting gain or loss. Two deep-learning policies—an RNN family model and a Transformer—were compared under the same educational setup.</p>
+          <div class="rl-loop" aria-label="Reinforcement learning loop"><span><b>State</b> price history + portfolio</span><i>→</i><span><b>Policy</b> RNN or Transformer</span><i>→</i><span><b>Action</b> buy / sell</span><i>→</i><span><b>Reward</b> portfolio change</span></div>
+          <div class="date-split"><div><span>Train</span><strong>Jan 2014 → Aug 2018</strong></div><div><span>Test</span><strong>Sep 2018 → Aug 2019</strong></div></div>
+        </section>
 
-  <section class="section">
-    <div class="project-summary">
-      <strong>Why this page exists</strong>
-      <p class="lede">The original publication page is gone, so this site now provides the professional framing that the repository alone should not be asked to carry.</p>
-      <p>The core project compares sequence-oriented modeling approaches for stock-series prediction, including RNN and Transformer-based thinking. The report gives reviewers a readable overview, while the notebook is the stronger signal for implementation authenticity.</p>
-    </div>
-  </section>
+        <section id="policies">
+          <p class="section-number">02 · Policies</p>
+          <h2>Sequential memory versus parallel attention.</h2>
+          <div class="policy-compare"><article><p>RNN policy</p><h3>Process the series step by step</h3><ul><li>Two linear layers</li><li>Convolution layer</li><li>Gated recurrent unit</li><li>History carried through recurrent state</li></ul></article><article><p>Transformer policy</p><h3>Attend across the observed sequence</h3><ul><li>Two encoder layers</li><li>Two attention heads</li><li>Embedding dimension of 50</li><li>Positional encoding preserves order</li></ul></article></div>
+          <p>The report intentionally omitted a Transformer decoder: the policy needed a representation for action selection, not a translation back into another sequence.</p>
+        </section>
 
-  <section class="section">
-    <div class="note-card">
-      <strong>Reviewer guidance</strong>
-      <ul>
-        <li>Start with the README for the relationship between the report and notebook.</li>
-        <li>Use the notebook to evaluate implementation seriousness.</li>
-        <li>Use the provenance notes to understand what data artifacts are intentionally absent from the public version.</li>
-      </ul>
-      <div class="link-list">
-        <a href="https://github.com/tryambak2019/AISC/blob/main/RL/Paper.docx" target="_blank" rel="noreferrer">Open written report ↗</a>
-        <a href="https://github.com/tryambak2019/AISC/blob/main/RL/Reinforcement_Learning_RNN_Transformer_AttentionLSTM.ipynb" target="_blank" rel="noreferrer">Open notebook ↗</a>
+        <section id="results">
+          <p class="section-number">03 · Reported results</p>
+          <h2>The Transformer led in this run—but the numbers require context.</h2>
+          <div class="chart-pair">
+            <div class="bar-chart"><p>Training profit · 10 episodes</p>{train.map(item => <div class="bar-row"><span>{item.label}</span><div><i style={`width:${item.value/item.max*100}%`}></i></div><strong>${item.value.toLocaleString()}</strong></div>)}</div>
+            <div class="bar-chart"><p>Test profit · reported run</p>{test.map(item => <div class="bar-row"><span>{item.label}</span><div><i style={`width:${item.value/item.max*100}%`}></i></div><strong>${item.value.toLocaleString()}</strong></div>)}</div>
+          </div>
+          <div class="result-callout"><span>Episodes to reach 1.1× portfolio ratio</span><div><strong>11</strong><small>RNN</small></div><div class="winner"><strong>2</strong><small>Transformer</small></div></div>
+          <p class="source-note">Values above are transcribed from the attached report. They are historical experiment outputs, not independently rerun results and not evidence of future returns.</p>
+        </section>
+
+        <section id="audit">
+          <p class="section-number">04 · Method audit</p>
+          <h2>The honest conclusion is narrower than “Transformers trade better.”</h2>
+          <div class="verdict-grid"><div class="supports"><strong>What the run suggests</strong><ul><li>The Transformer policy found a stronger solution in this specific configuration.</li><li>Attention offered a credible alternative to recurrent sequence processing.</li><li>A held-out time period was used instead of reporting training behavior alone.</li></ul></div><div class="limits"><strong>Why it is not investment evidence</strong><ul><li>One index and one historical window.</li><li>Only 10 training episodes and no repeated random seeds.</li><li>No transaction costs, slippage, risk-adjusted return, or drawdown analysis reported.</li><li>Evaluation stopped at a profit threshold, which can bias comparisons.</li></ul></div></div>
+          <blockquote><strong>Defensible takeaway:</strong> in this proof of concept, the Transformer policy outperformed the RNN policy under the report’s chosen environment and stopping rule. Generalization remains untested.</blockquote>
+        </section>
+
+        <section id="credit" class="credit-box">
+          <p class="section-number">Archive & provenance</p>
+          <h2>The original AISC page disappeared; the report and implementation path remain inspectable.</h2>
+          <p>This page is an edited presentation of the attached historical report. The repository contains the written paper, notebook, and curation notes. The material is educational and should not be read as financial advice or as a validated trading strategy.</p>
+          <div class="link-list"><a href="https://github.com/tryambak2019/AISC/tree/main/RL" target="_blank" rel="noreferrer">Inspect project archive ↗</a><a href="https://github.com/tryambak2019/AISC/blob/main/RL/Reinforcement_Learning_RNN_Transformer_AttentionLSTM.ipynb" target="_blank" rel="noreferrer">Open notebook ↗</a><a href="https://github.com/tryambak2019/AISC/blob/main/RL/Paper.docx" target="_blank" rel="noreferrer">Open original report ↗</a></div>
+        </section>
       </div>
     </div>
-  </section>
+  </article>
 </BaseLayout>

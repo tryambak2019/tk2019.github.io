@@ -1,50 +1,73 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="BERT4Rec Case Study — Tryambak Kaushik" currentPath="/aisc/recsys/" description="Case study for the curated BERT4Rec recommender systems project from the AISC portfolio.">
-  <section class="page-hero">
-    <p class="breadcrumbs"><a href="/">Home</a> / <a href="/aisc/">AISC</a> / RecSys</p>
-    <p class="eyebrow">AISC · Recommender systems</p>
-    <h1>BERT4Rec for sequential recommendations, presented with <em>evidence and limits.</em></h1>
-    <p>This project explored recommendation modeling with sequence-aware transformer methods. For portfolio use, the folder was reduced to the artifacts that still help a reviewer verify the work, while duplicate notebooks, generated files, and unnecessary copies were removed.</p>
-    <div class="action-row">
-      <a class="button primary" href="https://github.com/tryambak2019/AISC/tree/main/RecSys" target="_blank" rel="noreferrer">Open RecSys folder ↗</a>
-      <a class="button secondary" href="https://github.com/tryambak2019/AISC/blob/main/RecSys/README.md" target="_blank" rel="noreferrer">Read curation notes ↗</a>
-    </div>
-  </section>
+<BaseLayout title="BERT4Rec, explained — Tryambak Kaushik" currentPath="/aisc/recsys/" description="An editorial reconstruction of the retired AISC BERT4Rec report: bidirectional sequential recommendation, masked-item training, results, and limitations.">
+  <article class="article-shell">
+    <header class="article-hero">
+      <p class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/aisc/">AISC archive</a><span>/</span>BERT4Rec</p>
+      <p class="eyebrow">Sequential recommendation · Report restored from 2019</p>
+      <h1>Recommendation as a <em>missing-item problem.</em></h1>
+      <p class="dek">BERT4Rec replaces one-way next-item prediction with a bidirectional Transformer trained to reconstruct masked interactions. This restored study explains the mechanism, the evidence reported in the original paper, and the limits of the project.</p>
+      <div class="article-meta"><span>8 min read</span><span>Architecture + training</span><span>Source study: Sun et al. (2019)</span></div>
+    </header>
 
-  <section class="section">
-    <div class="section-heading">
-      <p class="kicker">What a reviewer should look at</p>
-      <h2>The project is represented through the report, the main notebook line, and the dataset reference.</h2>
-    </div>
-    <div class="detail-grid">
-      <div class="detail-card"><strong>Primary report</strong><span>The retained capstone document captures the framing, method discussion, and broader recommendation context.</span></div>
-      <div class="detail-card"><strong>Notebook evidence</strong><span>The kept BERT4Rec notebooks show the implementation path more directly than a polished report alone would.</span></div>
-      <div class="detail-card"><strong>Reproducibility</strong><span>The MovieLens dataset reference and provenance notes explain what is public and what was intentionally not republished.</span></div>
-    </div>
-  </section>
+    <div class="article-layout">
+      <aside class="article-rail">
+        <p>On this page</p>
+        <a href="#problem">The problem</a><a href="#mechanism">The mechanism</a><a href="#training">Training objective</a><a href="#evidence">Evidence</a><a href="#judgment">What holds up</a><a href="#credit">Credit & sources</a>
+      </aside>
+      <div class="article-body">
+        <section id="problem">
+          <p class="section-number">01 · The problem</p>
+          <h2>A user’s next choice depends on more than the last click.</h2>
+          <p>Classical recommenders often treat preferences as a static user-item matrix. Sequential models add order, but many predict strictly left-to-right: each interaction can only use what came before it. That is natural at inference time, yet restrictive during training.</p>
+          <blockquote><strong>The BERT4Rec idea:</strong> hide several items inside a known interaction sequence and ask the model to recover them using context on both sides.</blockquote>
+          <div class="sequence-demo" aria-label="Masked recommendation sequence"><span>Arrival</span><i>→</i><span>Blade Runner</span><i>→</i><span class="masked">[ MASK ]</span><i>→</i><span>Ex Machina</span><i>→</i><span>?</span></div>
+          <p>This reframing creates more training signals than supervising only the final item and lets every position learn a representation informed by the complete observed sequence.</p>
+        </section>
 
-  <section class="section">
-    <div class="project-summary">
-      <strong>Project summary</strong>
-      <p class="lede">This work focused on sequential recommendation rather than static collaborative filtering. The choice of BERT4Rec matters because bidirectional sequence modeling can better represent user interaction context than simpler next-item baselines.</p>
-      <p>The public portfolio version keeps the work honest: not every intermediary artifact is preserved, and not every result is rebuilt on the site. Instead, the page points directly to the repo evidence, the kept report, and the curation notes so a reviewer can assess the project without guessing what is missing.</p>
-    </div>
-  </section>
+        <section id="mechanism">
+          <p class="section-number">02 · The mechanism</p>
+          <h2>An encoder stack turns interactions into contextual item representations.</h2>
+          <div class="mechanism-grid">
+            <div><b>1</b><h3>Item + position</h3><p>Each interaction receives an item embedding and a learned positional embedding.</p></div>
+            <div><b>2</b><h3>Multi-head attention</h3><p>Different heads learn different relationships among positions in the sequence.</p></div>
+            <div><b>3</b><h3>Feed-forward transform</h3><p>GELU layers reshape the contextual representation at each position.</p></div>
+            <div><b>4</b><h3>Item probabilities</h3><p>The masked position is projected back over the item vocabulary.</p></div>
+          </div>
+          <div class="formula-card"><span>Residual Transformer block</span><code>output = LayerNorm(input + Dropout(Sublayer(input)))</code></div>
+          <p>The design resembles BERT’s encoder, not a full language-translation Transformer. There is no decoder because the target is an item identity, not a generated sentence. At test time a mask is appended to the user’s history and the model ranks candidate items for that position.</p>
+        </section>
 
-  <section class="section">
-    <div class="note-card">
-      <strong>Portfolio judgment</strong>
-      <ul>
-        <li>The retained .docx is useful supporting evidence inside the repository.</li>
-        <li>For public presentation, this page is the better entry point because it explains what the reviewer is seeing and why the folder looks the way it does.</li>
-        <li>The repo remains the source of truth; this page provides the reading path.</li>
-      </ul>
-      <div class="link-list">
-        <a href="https://github.com/tryambak2019/AISC/blob/main/RecSys/RecSys-Capstone.docx" target="_blank" rel="noreferrer">Open supporting report ↗</a>
-        <a href="https://github.com/tryambak2019/AISC/blob/main/PORTFOLIO_DATA_PROVENANCE.md" target="_blank" rel="noreferrer">Open provenance notes ↗</a>
+        <section id="training">
+          <p class="section-number">03 · Training objective</p>
+          <h2>Masking is the useful constraint—not a cosmetic borrowing from NLP.</h2>
+          <p>Multiple items are randomly replaced with mask tokens. The model minimizes negative log-likelihood only at those masked positions. The mask proportion therefore controls a real trade-off: too little masking yields fewer learning targets; too much destroys the context needed to infer them.</p>
+          <div class="insight-row"><div><strong>Long histories</strong><span>performed best with lower mask proportions</span></div><div><strong>Short histories</strong><span>tolerated higher mask proportions</span></div><div><strong>Hidden size</strong><span>showed diminishing returns on sparse datasets</span></div></div>
+          <figure class="report-figure"><img src="/assets/aisc/bert4rec-mask-proportion.png" alt="Reported BERT4Rec hit rate and NDCG at different mask proportions across four datasets" loading="lazy" /><figcaption>Mask proportion sensitivity reported by Sun et al.; optimum settings vary with sequence length and dataset density.</figcaption></figure>
+        </section>
+
+        <section id="evidence">
+          <p class="section-number">04 · Evidence in the source study</p>
+          <h2>Four datasets, three ranking metrics, and consistently stronger reported results.</h2>
+          <p>The source paper evaluated MovieLens 1M and 20M, Steam, and Amazon Beauty. For each user, the last interaction was held out for test and the penultimate interaction for validation. Ground-truth items were ranked against 100 sampled negatives using hit rate, mean reciprocal rank, and NDCG.</p>
+          <div class="metric-defs"><div><strong>HR</strong><span>Did the relevant item appear in the top-k?</span></div><div><strong>MRR</strong><span>How early did the first relevant item appear?</span></div><div><strong>NDCG</strong><span>How useful was the ranking order?</span></div></div>
+          <figure class="report-figure wide"><img src="/assets/aisc/bert4rec-results.png" alt="Table of BERT4Rec performance against recommendation baselines on Beauty, Steam, MovieLens 1M and MovieLens 20M" loading="lazy" /><figcaption>BERT4Rec led the listed baselines across the reported metrics. This is a figure from the source paper reproduced in the archived report—not a rerun performed for this portfolio.</figcaption></figure>
+        </section>
+
+        <section id="judgment">
+          <p class="section-number">05 · Engineering judgment</p>
+          <h2>What remains useful—and what this report cannot claim.</h2>
+          <div class="verdict-grid"><div class="supports"><strong>Supported</strong><ul><li>Bidirectional context can improve sequence representations.</li><li>Masked-item prediction creates richer supervision than final-item-only training.</li><li>Sequence length, sparsity, mask ratio, and hidden size interact.</li></ul></div><div class="limits"><strong>Not established here</strong><ul><li>No independent reproduction of the paper’s benchmark.</li><li>No online A/B test, latency study, or production serving analysis.</li><li>Sampled-negative ranking can overstate real-catalog performance.</li></ul></div></div>
+        </section>
+
+        <section id="credit" class="credit-box">
+          <p class="section-number">Credit & provenance</p>
+          <h2>A collaborative AISC report, restored without inflating authorship.</h2>
+          <p>The 2019 workshop report credits Robert Hensley, Madhur Kanjolia, Hari Ravindran, and Tryambak Kaushik. The model-architecture and training-specifics sections were co-written by Robert Hensley and Tryambak Kaushik; other contributions are identified in the archived report. The original AISC URL was retired, so this edited presentation is hosted here while the source document remains available for inspection.</p>
+          <div class="link-list"><a href="https://arxiv.org/abs/1904.06690" target="_blank" rel="noreferrer">Read the BERT4Rec paper ↗</a><a href="https://github.com/tryambak2019/AISC/tree/main/RecSys" target="_blank" rel="noreferrer">Inspect project archive ↗</a><a href="https://github.com/tryambak2019/AISC/blob/main/RecSys/RecSys-Capstone.docx" target="_blank" rel="noreferrer">Open original report ↗</a></div>
+        </section>
       </div>
     </div>
-  </section>
+  </article>
 </BaseLayout>
